@@ -1,17 +1,17 @@
 ﻿Console.Write("Введите любое пятичзначное число: ");
 
-int InputNumber = int.Parse(Console.ReadLine());
+int inputNumber = int.Parse(Console.ReadLine());
 
-int x = InputNumber / 1000;
-int y = InputNumber % 100;
+int x = inputNumber / 1000;
+int y = inputNumber % 100;
 
-int FirstDigit = InputNumber / 10000;
-int SecondDigit = x % 10;
-int ForthDigit = y / 10;
-int FifthDigit = InputNumber % 10;
+int firstDigit = inputNumber / 10000;
+int secondDigit = x % 10;
+int forthDigit = y / 10;
+int fifthDigit = inputNumber % 10;
 
-if (FirstDigit == FifthDigit && SecondDigit == ForthDigit)
+if (firstDigit == fifthDigit && secondDigit == forthDigit)
 {
-    Console.WriteLine($"Число {InputNumber} является палиндромом!");
+    Console.WriteLine($"Число {inputNumber} является палиндромом!");
 }
-else Console.WriteLine($"Число {InputNumber} не является палиндромом!");
+else Console.WriteLine($"Число {inputNumber} не является палиндромом!");

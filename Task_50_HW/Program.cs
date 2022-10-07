@@ -1,4 +1,5 @@
-﻿int[,] FillArray (int[,] array)
+﻿// Заполняет массив случайными натуральными числами
+int[,] FillArray (int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -10,6 +11,7 @@
     return array;
 }
 
+// Выводит массив
 void PrintArray2D (int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -22,19 +24,21 @@ void PrintArray2D (int[,] array)
     }
 }
 
+// Проверяет есть ли в массиве элемент по заданным пользователем "координатам"
 bool AreUserRowsAndColumnsInArray (int[,] array, int m, int n)
 {
-    if (array[m,n] > 0)
+    if (array[m,n] >= 0)
     {
         return true;
     }
     return false;
 }
 
+// Генерация случайного массива
 int a = new Random().Next(1,11);
 int b = new Random().Next(1,11);
-
 int[,] array = new int [a,b];
+
 FillArray(array);
 Console.WriteLine($"Задан массив из {a} строк, {b} столбцов");
 Console.WriteLine();

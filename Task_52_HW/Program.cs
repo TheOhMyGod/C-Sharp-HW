@@ -29,12 +29,12 @@ void ColumnNumbersSum (int[,] array)
 {
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        int sum = 0;
+        double sum = 0;
         for (int j = 0; j < array.GetLength(0); j++)
         {
             sum = sum + array[j,i];
         }
-        Console.WriteLine($"Сумма чисел столбца {i} равна {sum}");
+        Console.WriteLine($"Среднее арифметическое чисел столбца {i+1} равна {sum/array.GetLength(0)}");
         Console.WriteLine();
     }
 }
